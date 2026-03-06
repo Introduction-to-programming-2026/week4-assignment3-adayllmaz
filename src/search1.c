@@ -18,3 +18,27 @@ Rules:
 - You must use strcmp().
 - Do NOT use == for string comparison.
 */
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    char names[4][20] = {"Ada", "Ali", "Ayse", "Can"};
+    char search[20];
+
+    printf("Name: ");
+    scanf("%s", search);
+
+    for (int i = 0; i < 4; i++)
+    {
+        if (strcmp(names[i], search) == 0)
+        {
+            printf("Found\n");
+            return 0;
+        }
+    }
+
+    printf("Not found\n");
+
+    return 0;
+}
