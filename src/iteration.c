@@ -23,3 +23,29 @@ Rules:
 - No recursion allowed.
 - Output must match exactly.
 */
+#include <stdio.h>
+
+int main(void)
+{
+    int n;
+
+    // ask until valid
+    do
+    {
+        printf("Enter a positive number: ");
+        scanf("%d", &n);
+    }
+    while (n < 1);
+
+    // print pyramid
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
